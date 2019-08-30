@@ -1,0 +1,61 @@
+{
+  "name": "EventManagement",
+  "version": "1.0.0",
+  "description": "Event Management Internal Project",
+  "author": "Sapient",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "node server",
+    "build:dev": "webpack -p --progress --profile --colors --mode development",
+    "build:prod": "webpack -p --progress --profile --colors --mode production"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "react": "^16.2.0",
+    "react-confirm-alert": "^2.0.5",
+    "react-dom": "^16.2.0",
+    "react-hot-loader": "^4.0.0",
+    "react-protected-mailto": "^1.0.3",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "axios": "^0.18.0"
+  },
+  "devDependencies": {
+    "bcrypt": "^3.0.0",
+    "@babel/core": "^7.0.0-beta.42",
+    "@babel/preset-env": "^7.0.0-beta.42",
+    "@babel/preset-react": "^7.0.0-beta.42",
+    "babel-loader": "^8.0.0-beta.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "uglifyjs-webpack-plugin": "^2.1.3",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3",
+    "url-loader": "0.6.2",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-middleware": "^3.0.1",
+    "webpack-hot-middleware": "^2.21.2",
+    "webpack-merge": "^4.1.2",
+    "nodemon": "^1.17.2",
+    "nodemailer": "~2.7.2",
+    "postcss-flexbugs-fixes": "3.2.0",
+    "postcss-loader": "^2.1.3",
+    "mongoose": "^5.0.11",
+    "autoprefixer": "^8.2.0",
+    "css-loader": "^0.28.11",
+    "express": "^4.16.3",
+    "connect-history-api-fallback": "^1.5.0",
+    "copy-webpack-plugin": "^4.5.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "^3.1.0",
+    "node-sass": "^4.7.2",
+    "redux-devtools-extension": "^2.13.5"
+  }
+}
