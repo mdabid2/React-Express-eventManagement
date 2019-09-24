@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import FormElementInput from  "../molecules/formEleInput";
 import Submit from  "../atoms/submit";
-import auth from'../utils/auth';
+import auth from'../../utils/auth';
 import axios from 'axios';
 
 export default class Login extends Component {
