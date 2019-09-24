@@ -9,5 +9,3 @@ ReactDOM.render(<App />, document.getElementById('app'));
 //     <App />
 //  </Provider>, document.getElementById('root'));
 // registerServiceWorker();
-
-
