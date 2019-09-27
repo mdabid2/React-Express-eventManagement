@@ -14,7 +14,6 @@ export default class Login extends Component {
             userError:''
         }
     }
-    
     onChange = (e) => {
         this.setState({ [e.target.name]: e.target.value });
     };

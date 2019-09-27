@@ -1,11 +1,14 @@
-//Reduscer Code can move 
 const initialState = {
-  text: ""
+  email:'example@email.com',
+  password:'xxxxxxx',
+  userError:'There are some issues'
 }; 
 const login = (state = initialState, action) => {
   switch (action.type) {
-    case 'FILTER_INVENTORY':
-      return "hello World";
+    case 'GETINPUTVALUE':
+      return {
+        email: action.obj.value
+      };
     default:
       return state;
   }

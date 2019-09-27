@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
 import {BrowserRouter, Switch, Route, Link} from 'react-router-dom';
+
+//App CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './assets/App.css';
-import Login from './components/pages/login';
-import Register from './components/pages/register';
-import EventsDashboard from './components/pages/events-dashbord';
-import AddModEvent from './components/pages/add-mod-events';
-import UserRegistration from './components/pages/user-registration';
-import ErrorPage from './components/pages/error-page';
-import PrivateRoute from './utils/privateroute';
-import SearchResults from './components/pages/search-results';
-import AdminDashboard from './components/pages/admin-users-dashbord';
+import '../assets/App.css';
+
+// Page Components
+import Login from './login';
+import Register from '../components/pages/register';
+import EventsDashboard from '../components/pages/events-dashbord';
+import AddModEvent from '../components/pages/add-mod-events';
+import UserRegistration from '../components/pages/user-registration';
+import ErrorPage from '../components/pages/error-page';
+import PrivateRoute from '../utils/privateroute';
+import SearchResults from '../components/pages/search-results';
+import AdminDashboard from '../components/pages/admin-users-dashbord';
 
 class App extends Component {
   
