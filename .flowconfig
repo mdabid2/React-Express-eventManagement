@@ -1,0 +1,15 @@
+[ignore]
+.*/node_modules/.*
+.*/dist/*
+.*/docs/*
+.*/__.next__/*
+
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+
+[strict]
