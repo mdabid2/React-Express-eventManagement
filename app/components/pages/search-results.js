@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SearchEvents from "./search-events";
+import SearchEvents from "../organisms/search-events";
 import {Link} from 'react-router-dom';
 import UserList from "./userlist";
 import axios from 'axios';

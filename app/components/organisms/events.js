@@ -6,21 +6,16 @@ import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css';
 
 export default class Events extends Component { 
-    constructor(props){
-        super(props);
-        this.state= {
-            events:[]
-        }
-    };
+
     deleteEvent = (index) => {
         confirmAlert({
             title: 'Confirm to Delete',
-            message: 'Are you sure want to delete this event: \n\n'+this.state.events[index].eventname,
+            message: 'Are you sure want to delete this event: \n\n'+this.props.events[index].eventname,
             buttons: [
                 {
                     label: 'YES',
                     onClick: () => {
-                        const id = this.state.events[index]._id;
+                        const id = this.props.events[index]._id;
                         axios.delete(`/api/addevent/${id}`)
                         .then(_d_ => { 
                             this._updateEvents(index, null);
@@ -40,12 +35,12 @@ export default class Events extends Component {
     publishedEvent = (index) => {
         confirmAlert({
             title: 'Publish this events',
-            message: 'Are you sure want to Publish this event: \n\n'+this.state.events[index].eventname,
+            message: 'Are you sure want to Publish this event: \n\n'+this.props.events[index].eventname,
             buttons: [
                 {
                     label: 'YES',
                     onClick: () => {
-                        const id = this.state.events[index]._id;
+                        const id = this.props.events[index]._id;
                         const publishevnt=true;
                         axios.put(`/api/publishevent/${id}`,{publishevnt})
                         .then(events => { 
@@ -68,7 +63,7 @@ export default class Events extends Component {
           })
     }
     _updateEvents(index, data) {
-        let prevData = this.state.events;
+        let prevData = this.props.events;
     
         if (data) {
             prevData[index] = data;
@@ -77,19 +72,26 @@ export default class Events extends Component {
             });
         } else {
             this.setState({
-                events: this.state.events.filter((_, i) => i !== index)
+                events: this.props.events.filter((_, i) => i !== index)
             });
         }
     };
+    // getEvents=()=>{
+    //   axios.get('/api/addevent')
+    //     .then(myEvents => { 
+    //         this.setState({ events:myEvents.data});
+    //   });
+    // }
     componentDidMount() {
-        axios.get('/api/addevent')
-        .then(myEvents => { 
-            this.setState({ events:myEvents.data});
-        });
+        //this.getEvents();
+        console.log("DidMount",this.props);
+        this.props.getAllEventsRequest();
     };
     
     render(){
-        const mapHtml=this.state.events.map((element,index) => {
+        console.log("Renders",this.props.events);
+        
+        const mapHtml=this.props.events.map((element,index) => {
         let urls="/userregistration/"+element._id
     
             return(
@@ -114,9 +116,7 @@ export default class Events extends Component {
                         />
                         :<button className="clock" title="Publish Events" onClick={() => this.publishedEvent(index)} />
                     }
-                    </td>
-                    
-                    
+                    </td>  
                 </tr>
             )
         });

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-import Events from './events';
-import auth from'../../utils/auth';
-import SearchEvents from "./search-events";
+import Events from '../../containers/events';
+import auth from '../../utils/auth';
+import SearchEvents from "../organisms/search-events";
 
 export default class EventsDashboard extends Component {
     
