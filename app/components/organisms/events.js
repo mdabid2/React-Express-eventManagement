@@ -90,10 +90,10 @@ export default class Events extends Component {
     
     render(){
         console.log("Renders",this.props.events);
-        
-        const mapHtml=this.props.events.map((element,index) => {
+        let mapHtml=[];
+        if(this.props.events&&this.props.events.events){
+        mapHtml=this.props.events.events.map((element,index) => {
         let urls="/userregistration/"+element._id
-    
             return(
                 <tr key={element._id}>
                     <td>{element.eventname}</td>
@@ -120,6 +120,7 @@ export default class Events extends Component {
                 </tr>
             )
         });
+      }
         return(
             
             <div className="events">

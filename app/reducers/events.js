@@ -5,7 +5,11 @@ const Events = (state = [], action) => {
     case GET_EVENTS:
       console.log("ReducerPayload",action.payload)
       console.log("ReducerState",state)
-      return action.payload.data
+      return {
+        events: (function(){
+          return action.payload.data
+        })()
+      }
     }
    return state;
   }
