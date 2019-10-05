@@ -1,5 +1,6 @@
-# Event Management Apps
+[CircleCI Status](https://circleci.com/gh/mdabid2/react-express-evm-tools.svg?style=shield)](https://circleci.com/gh/mdabid2/react-express-evm-tools)
 
+# Event Management Apps
 This is a demo project using the following technologies:
 - [React](https://facebook.github.io/react/) and [React Router](https://reacttraining.com/react-router/) for the frontend
 - [Express](http://expressjs.com/) and [Axios](https://www.npmjs.com/package/axios), and [Mongoose](http://mongoosejs.com/) for the backend
