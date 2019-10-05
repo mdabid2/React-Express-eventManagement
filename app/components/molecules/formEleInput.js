@@ -2,7 +2,7 @@ import React from 'react';
 import Label from "../atoms/label";
 import Input from "../atoms/input";
 
-const input = props =>  {
+const Fileinput = props =>  {
     return(
         <div className="form-group">
             <Label data={props.data}/>
@@ -11,4 +11,4 @@ const input = props =>  {
     );
 }
 
-export default input;
+export default Fileinput;

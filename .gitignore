@@ -10,6 +10,7 @@ logs
 *.log
 npm-debug.log*
 docs
+styleguide
 
 # OS stuff
 Desktop.ini
