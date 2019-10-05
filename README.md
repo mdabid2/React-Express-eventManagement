@@ -1,4 +1,4 @@
-[CircleCI Status](https://circleci.com/gh/mdabid2/react-express-evm-tools.svg?style=shield)](https://circleci.com/gh/mdabid2/react-express-evm-tools)
+[![CircleCI Status](https://circleci.com/gh/mdabid2/react-express-evm-tools.svg?style=shield)](https://circleci.com/gh/mdabid2/react-express-evm-tools)
 
 # Event Management Apps
 This is a demo project using the following technologies:
