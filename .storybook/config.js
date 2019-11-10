@@ -1,4 +1,4 @@
-import { addDecorator } from '@storybook/react';
-import { withInfo } from '@storybook/addon-info';
+import { configure } from '@storybook/react';
 
-addDecorator(withInfo); 
+// automatically import all files ending in *.stories.js
+configure(require.context('../app/stories', true, /\.stories\.js$/), module);
